@@ -1,0 +1,10 @@
+ignoredBuiltDependencies:
+  - core-js
+  - sharp
+  - unrs-resolver
+
+onlyBuiltDependencies:
+  - core-js
+  - jpegtran-bin
+  - sharp
+  - unrs-resolver

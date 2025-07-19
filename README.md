@@ -1,6 +1,6 @@
-# Next.js & Cloudinary example app
+# henziger.se - An image gallery web app
 
-This example shows how to create an image gallery site using Next.js, [Cloudinary](https://cloudinary.com), and [Tailwind](https://tailwindcss.com).
+This web app was built upon the [Next.js example with Cloudinary from Vercel](https://github.com/vercel/next.js/tree/canary/examples/with-cloudinary). The app is an image gallery site using Next.js, [Cloudinary](https://cloudinary.com), and [Tailwind](https://tailwindcss.com).
 
 ## Deploy your own
 
@@ -26,6 +26,11 @@ yarn create next-app --example with-cloudinary with-cloudinary-app
 pnpm create next-app --example with-cloudinary with-cloudinary-app
 ```
 
+## License
+
+This project is licensed under the MIT license, see [LICENSE.md] for details. However, the favicons used are from [Twitter Twemoji](ttps://github.com/twitter/twemoji/), licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
 ## References
 
+- Example template: https://github.com/vercel/next.js/tree/canary/examples/with-cloudinary
 - Cloudinary API: https://cloudinary.com/documentation/transformation_reference

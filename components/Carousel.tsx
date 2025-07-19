@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 import useKeypress from "react-use-keypress";
 import type { ImageProps } from "../utils/types";
 import { useLastViewedPhoto } from "../utils/useLastViewedPhoto";
 import SharedModal from "./SharedModal";
+import { CldImage } from "next-cloudinary";
 
 export default function Carousel({
   index,
@@ -34,7 +34,7 @@ export default function Carousel({
         className="absolute inset-0 z-30 cursor-default bg-black backdrop-blur-2xl"
         onClick={closeModal}
       >
-        <Image
+        <CldImage
           src={currentPhoto.blurDataUrl}
           className="pointer-events-none h-full w-full"
           alt="blurred background"
