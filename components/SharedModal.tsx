@@ -14,6 +14,7 @@ import downloadPhoto from "../utils/downloadPhoto";
 import { range } from "../utils/range";
 import type { ImageProps, SharedModalProps } from "../utils/types";
 import { CldImage } from "next-cloudinary";
+import clsx from "clsx";
 
 export default function SharedModal({
   index,
@@ -60,7 +61,13 @@ export default function SharedModal({
       >
         {/* Main image */}
         <div className="w-full overflow-hidden">
-          <div className="relative flex aspect-[4/3] items-center justify-center">
+          <div className={clsx("relative flex items-center justify-center",
+            {
+              "aspect-square": isSquare,
+              "aspect-[3/4]": isPortrait,
+              "aspect-[4/3]": !isSquare && !isPortrait
+            }
+          )}>
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={index}
@@ -74,11 +81,12 @@ export default function SharedModal({
                 <CldImage
                   src={currentImage.public_id}
                   crop={isPortrait || isSquare ? "fit" : "fill"}
-                  width={isPortrait ? 800 : 1920}
-                  height={isPortrait ? 1200 : 1080}
+                  width={isSquare ? 1280 : isPortrait ? 800 : 1920}
+                  height={isSquare ? 1280 : isPortrait ? 1200 : 1280}
                   priority
                   alt="One of Eric's images"
                   onLoad={() => setLoaded(true)}
+                  className={clsx(isSquare && "max-w-full max-h-screen object-contain")}
                 />
               </motion.div>
             </AnimatePresence>
@@ -89,7 +97,11 @@ export default function SharedModal({
         <div className="absolute inset-0 mx-auto flex max-w-7xl items-center justify-center">
           {/* Buttons */}
           {loaded && (
-            <div className="relative aspect-[4/3] max-h-full w-full">
+            <div className={clsx("relative max-h-full w-full", {
+              "aspect-square": isSquare,
+              "aspect-[3/4]": isPortrait,
+              "aspect-[4/3]": !isSquare && !isPortrait
+            })}>
               {navigation && (
                 <>
                   {index > 0 && (
