@@ -60,7 +60,7 @@ export default function SharedModal({
       >
         {/* Main image */}
         <div className="w-full overflow-hidden">
-          <div className="relative flex aspect-[4/3] w-full h-full items-center justify-center">
+          <div className="relative flex aspect-[4/3] items-center justify-center">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={index}
@@ -69,7 +69,7 @@ export default function SharedModal({
                 initial="enter"
                 animate="center"
                 exit="exit"
-                className="absolute max-h-[90vh] w-auto h-auto"
+                className="absolute"
               >
                 <CldImage
                   src={currentImage.public_id}
@@ -79,7 +79,6 @@ export default function SharedModal({
                   priority
                   alt="One of Eric's images"
                   onLoad={() => setLoaded(true)}
-                  className="max-h-[90vh] w-auto h-auto object-contain"
                 />
               </motion.div>
             </AnimatePresence>
