@@ -28,7 +28,7 @@ pnpm create next-app --example with-cloudinary with-cloudinary-app
 
 ## License
 
-This project is licensed under the MIT license, see [LICENSE.md] for details. However, the favicons used are from [Twitter Twemoji](ttps://github.com/twitter/twemoji/), licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+This project is licensed under the MIT license, see [LICENSE.md](./LICENSE.md) for details. However, the favicons used are from [Twitter Twemoji](https://github.com/twitter/twemoji/), licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## References
 
