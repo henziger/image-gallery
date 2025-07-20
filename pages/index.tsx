@@ -128,6 +128,7 @@ export async function getStaticProps() {
     .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
     .sort_by("public_id", "asc")
     .max_results(400)
+    .with_field("context")
     .execute();
   let reducedResults: ImageProps[] = [];
 
@@ -139,6 +140,8 @@ export async function getStaticProps() {
       width: result.width,
       public_id: result.public_id,
       format: result.format,
+      caption: result.context?.caption || "",
+      description: result.context?.alt || "",
     });
     i++;
   }
