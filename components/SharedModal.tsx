@@ -4,6 +4,7 @@ import {
   ArrowUturnLeftIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  InformationCircleIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
@@ -26,6 +27,7 @@ export default function SharedModal({
   direction,
 }: SharedModalProps) {
   const [loaded, setLoaded] = useState(false);
+  const [showInfo, toggleShowInfo] = useState(false);
 
   let filteredImages = images?.filter((img: ImageProps) =>
     range(index - 15, index + 15).includes(img.id),
@@ -160,9 +162,23 @@ export default function SharedModal({
                     <ArrowUturnLeftIcon className="h-5 w-5" />
                   )}
                 </button>
+                <button
+                  onClick={() => toggleShowInfo(!showInfo)}
+                  className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
+                >
+                  <InformationCircleIcon className="h-5 w-5" />
+                </button>
               </div>
+              {/* Info panel */}
+              {showInfo && (
+                <div className="absolute top-4 left-1/2 z-50 w-[50%] -translate-x-1/2 rounded-lg bg-black/30 p-4 text-center text-white backdrop-blur-md">
+                  <p className="text-lg font-bold">{currentImage.caption}</p>
+                  <p className="mt-2 text-sm font-normal">{currentImage.description}</p>
+                </div>
+              )}
             </div>
           )}
+
           {/* Bottom Nav bar */}
           {navigation && (
             <div className="fixed inset-x-0 bottom-0 z-40 overflow-hidden bg-gradient-to-b from-black/0 to-black/60">
