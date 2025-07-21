@@ -88,7 +88,7 @@ export default function SharedModal({
                   priority
                   alt="One of Eric's images"
                   onLoad={() => setLoaded(true)}
-                  className={clsx(isSquare && "max-w-full max-h-screen object-contain")}
+                  className={clsx((isSquare || isPortrait) && "max-w-full max-h-screen object-contain")}
                 />
               </motion.div>
             </AnimatePresence>
