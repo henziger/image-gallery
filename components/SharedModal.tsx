@@ -82,13 +82,13 @@ export default function SharedModal({
               >
                 <CldImage
                   src={currentImage.public_id}
-                  crop={isPortrait || isSquare ? "fit" : "fill"}
-                  width={isSquare ? 1280 : isPortrait ? 800 : 1920}
-                  height={isSquare ? 1280 : isPortrait ? 1200 : 1280}
+                  crop={"fit"}
+                  width={isPortrait ? 768 : isSquare ? 1280 : 1536}
+                  height={1280}
                   priority
                   alt="One of Eric's images"
                   onLoad={() => setLoaded(true)}
-                  className={clsx((isSquare || isPortrait) && "max-w-full max-h-screen object-contain")}
+                  className={"max-w-full max-h-screen object-contain"}
                 />
               </motion.div>
             </AnimatePresence>
