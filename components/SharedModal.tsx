@@ -96,7 +96,11 @@ export default function SharedModal({
         </div>
 
         {/* Buttons + bottom nav bar */}
-        <div className="absolute inset-0 mx-auto flex max-w-7xl items-center justify-center">
+        <div className={clsx("absolute inset-0 mx-auto flex items-center justify-center", {
+          "max-w-screen-md": isPortrait,
+          "max-w-screen-xl": isSquare,
+          "max-w-screen-2xl": !isSquare && !isPortrait
+        })}>
           {/* Buttons */}
           {loaded && (
             <div className={clsx("relative max-h-full w-full", {
