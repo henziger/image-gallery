@@ -7,16 +7,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.4",
+    "@headlessui/react": "^1.7.19",
     "@heroicons/react": "^2.0.13",
     "cloudinary": "^2.8.0",
     "clsx": "^2.1.1",
     "eslint-config-next": "^15.5.7",
-    "framer-motion": "^7.6.4",
+    "framer-motion": "^12.23.25",
     "imagemin": "^9.0.1",
     "imagemin-jpegtran": "^8.0.0",
-    "next": "15.3.6",
-    "next-cloudinary": "^6.16.0",
+    "next": "15.4.8",
+    "next-cloudinary": "^6.17.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hooks-global-state": "^2.0.0",
@@ -25,12 +25,12 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.17",
-    "@types/node": "18.11.9",
+    "@types/node": "22.19.1",
     "@types/react": "18.2.8",
     "postcss": "^8.4.18",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.17",
-    "typescript": "4.8.4"
+    "typescript": "5.9.3"
   }
 }
