@@ -29,7 +29,7 @@ export default function SharedModal({
   const [loaded, setLoaded] = useState(false);
   const [showInfo, toggleShowInfo] = useState(false);
 
-  let filteredImages = images?.filter((img: ImageProps) =>
+  const filteredImages = images?.filter((img: ImageProps) =>
     range(index - 15, index + 15).includes(img.id),
   );
 
@@ -47,7 +47,7 @@ export default function SharedModal({
     trackMouse: true,
   });
 
-  let currentImage = images ? images[index] : currentPhoto;
+  const currentImage = images ? images[index] : currentPhoto;
   const isSquare = currentImage.height == currentImage.width;
   const isPortrait = currentImage.height > currentImage.width;
 
@@ -191,7 +191,7 @@ export default function SharedModal({
                 className="mx-auto mt-6 mb-6 flex aspect-[4/3] h-14"
               >
                 <AnimatePresence initial={false}>
-                  {filteredImages.map(({ public_id, format, id }) => (
+                  {filteredImages.map(({ public_id, id }) => (
                     <motion.button
                       initial={{
                         width: "0%",

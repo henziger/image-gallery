@@ -30,7 +30,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   return (
     <>
       <Head>
-        <title>Eric Henziger's image archive</title>
+        <title>Eric Henziger&apos;s image archive</title>
         <meta
           property="og:image"
           content="https://henziger.se/og-image.png"
@@ -130,10 +130,10 @@ export async function getStaticProps() {
     .max_results(400)
     .with_field("context")
     .execute();
-  let reducedResults: ImageProps[] = [];
+  const reducedResults: ImageProps[] = [];
 
   let i = 0;
-  for (let result of results.resources) {
+  for (const result of results.resources) {
     reducedResults.push({
       id: i,
       height: result.height,

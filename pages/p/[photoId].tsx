@@ -10,14 +10,14 @@ import type { ImageProps } from "../../utils/types";
 const Home: NextPage = ({ currentPhoto }: { currentPhoto: ImageProps }) => {
   const router = useRouter();
   const { photoId } = router.query;
-  let index = Number(photoId);
+  const index = Number(photoId);
 
   const currentPhotoUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_2560/${currentPhoto.public_id}.${currentPhoto.format}`;
 
   return (
     <>
       <Head>
-        <title>One of Eric's photos</title>
+        <title>One of Eric&apos;s photos</title>
         <meta property="og:image" content={currentPhotoUrl} />
         <meta name="twitter:image" content={currentPhotoUrl} />
       </Head>
@@ -33,9 +33,9 @@ export default Home;
 export const getStaticProps: GetStaticProps = async (context) => {
   const results = await getResults();
 
-  let reducedResults: ImageProps[] = [];
+  const reducedResults: ImageProps[] = [];
   let i = 0;
-  for (let result of results.resources) {
+  for (const result of results.resources) {
     reducedResults.push({
       id: i,
       height: result.height,
@@ -67,7 +67,7 @@ export async function getStaticPaths() {
     .max_results(400)
     .execute();
 
-  let fullPaths = [];
+  const fullPaths = [];
   for (let i = 0; i < results.resources.length; i++) {
     fullPaths.push({ params: { photoId: i.toString() } });
   }
