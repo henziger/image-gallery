@@ -66,8 +66,8 @@ export default function SharedModal({
           <div className={clsx("relative flex items-center justify-center",
             {
               "aspect-square": isSquare,
-              "aspect-[3/4]": isPortrait,
-              "aspect-[4/3]": !isSquare && !isPortrait
+              "aspect-3/4": isPortrait,
+              "aspect-4/3": !isSquare && !isPortrait
             }
           )}>
             <AnimatePresence initial={false} custom={direction}>
@@ -97,22 +97,22 @@ export default function SharedModal({
 
         {/* Buttons + bottom nav bar */}
         <div className={clsx("absolute inset-0 mx-auto flex items-center justify-center", {
-          "max-w-screen-md": isPortrait,
-          "max-w-screen-xl": isSquare,
-          "max-w-screen-2xl": !isSquare && !isPortrait
+          "max-w-(--breakpoint-md)": isPortrait,
+          "max-w-(--breakpoint-xl)": isSquare,
+          "max-w-(--breakpoint-2xl)": !isSquare && !isPortrait
         })}>
           {/* Buttons */}
           {loaded && (
             <div className={clsx("relative max-h-full w-full", {
               "aspect-square": isSquare,
-              "aspect-[3/4]": isPortrait,
-              "aspect-[4/3]": !isSquare && !isPortrait
+              "aspect-3/4": isPortrait,
+              "aspect-4/3": !isSquare && !isPortrait
             })}>
               {navigation && (
                 <>
                   {index > 0 && (
                     <button
-                      className="absolute left-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
+                      className="absolute left-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-hidden"
                       style={{ transform: "translate3d(0, 0, 0)" }}
                       onClick={() => changePhotoId(index - 1)}
                     >
@@ -121,7 +121,7 @@ export default function SharedModal({
                   )}
                   {index + 1 < images.length && (
                     <button
-                      className="absolute right-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
+                      className="absolute right-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-hidden"
                       style={{ transform: "translate3d(0, 0, 0)" }}
                       onClick={() => changePhotoId(index + 1)}
                     >
@@ -185,10 +185,10 @@ export default function SharedModal({
 
           {/* Bottom Nav bar */}
           {navigation && (
-            <div className="fixed inset-x-0 bottom-0 z-40 overflow-hidden bg-gradient-to-b from-black/0 to-black/60">
+            <div className="fixed inset-x-0 bottom-0 z-40 overflow-hidden bg-linear-to-b from-black/0 to-black/60">
               <motion.div
                 initial={false}
-                className="mx-auto mt-6 mb-6 flex aspect-[4/3] h-14"
+                className="mx-auto mt-6 mb-6 flex aspect-4/3 h-14"
               >
                 <AnimatePresence initial={false}>
                   {filteredImages.map(({ public_id, id }) => (
@@ -206,10 +206,10 @@ export default function SharedModal({
                       onClick={() => changePhotoId(id)}
                       key={id}
                       className={`${id === index
-                        ? "z-20 rounded-md shadow shadow-black/50"
+                        ? "z-20 rounded-md shadow-sm shadow-black/50"
                         : "z-10"
                         } ${id === 0 ? "rounded-l-md" : ""} ${id === images.length - 1 ? "rounded-r-md" : ""
-                        } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-none`}
+                        } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-hidden`}
                     >
                       <CldImage
                         alt="small photos on the bottom"
