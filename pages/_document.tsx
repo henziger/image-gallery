@@ -6,10 +6,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="Eric Henziger's image archive"
-          />
+          <meta name="description" content="Eric Henziger's image archive" />
           <meta property="og:site_name" content="henziger.se" />
           <meta property="og:title" content="Eric Henziger's image archive" />
           <meta

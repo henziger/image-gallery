@@ -58,18 +58,19 @@ export default function SharedModal({
         opacity: { duration: 0.2 },
       }}
     >
-      <div className="relative z-50 flex w-full h-full items-center justify-center"
+      <div
+        className="relative z-50 flex w-full h-full items-center justify-center"
         {...handlers}
       >
         {/* Main image */}
         <div className="w-full overflow-hidden">
-          <div className={clsx("relative flex items-center justify-center",
-            {
+          <div
+            className={clsx("relative flex items-center justify-center", {
               "aspect-square": isSquare,
               "aspect-3/4": isPortrait,
-              "aspect-4/3": !isSquare && !isPortrait
-            }
-          )}>
+              "aspect-4/3": !isSquare && !isPortrait,
+            })}
+          >
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={index}
@@ -96,18 +97,25 @@ export default function SharedModal({
         </div>
 
         {/* Buttons + bottom nav bar */}
-        <div className={clsx("absolute inset-0 mx-auto flex items-center justify-center", {
-          "max-w-(--breakpoint-md)": isPortrait,
-          "max-w-(--breakpoint-xl)": isSquare,
-          "max-w-(--breakpoint-2xl)": !isSquare && !isPortrait
-        })}>
+        <div
+          className={clsx(
+            "absolute inset-0 mx-auto flex items-center justify-center",
+            {
+              "max-w-(--breakpoint-md)": isPortrait,
+              "max-w-(--breakpoint-xl)": isSquare,
+              "max-w-(--breakpoint-2xl)": !isSquare && !isPortrait,
+            },
+          )}
+        >
           {/* Buttons */}
           {loaded && (
-            <div className={clsx("relative max-h-full w-full", {
-              "aspect-square": isSquare,
-              "aspect-3/4": isPortrait,
-              "aspect-4/3": !isSquare && !isPortrait
-            })}>
+            <div
+              className={clsx("relative max-h-full w-full", {
+                "aspect-square": isSquare,
+                "aspect-3/4": isPortrait,
+                "aspect-4/3": !isSquare && !isPortrait,
+              })}
+            >
               {navigation && (
                 <>
                   {index > 0 && (
@@ -177,7 +185,9 @@ export default function SharedModal({
               {showInfo && (
                 <div className="absolute top-4 left-1/2 z-50 w-[50%] -translate-x-1/2 rounded-lg bg-black/30 p-4 text-center text-white backdrop-blur-md">
                   <p className="text-lg font-bold">{currentImage.caption}</p>
-                  <p className="mt-2 text-sm font-normal">{currentImage.description}</p>
+                  <p className="mt-2 text-sm font-normal">
+                    {currentImage.description}
+                  </p>
                 </div>
               )}
             </div>
@@ -205,20 +215,23 @@ export default function SharedModal({
                       exit={{ width: "0%" }}
                       onClick={() => changePhotoId(id)}
                       key={id}
-                      className={`${id === index
-                        ? "z-20 rounded-md shadow-sm shadow-black/50"
-                        : "z-10"
-                        } ${id === 0 ? "rounded-l-md" : ""} ${id === images.length - 1 ? "rounded-r-md" : ""
-                        } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-hidden`}
+                      className={`${
+                        id === index
+                          ? "z-20 rounded-md shadow-sm shadow-black/50"
+                          : "z-10"
+                      } ${id === 0 ? "rounded-l-md" : ""} ${
+                        id === images.length - 1 ? "rounded-r-md" : ""
+                      } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-hidden`}
                     >
                       <CldImage
                         alt="small photos on the bottom"
                         width={180}
                         height={120}
-                        className={`${id === index
-                          ? "brightness-110 hover:brightness-110"
-                          : "brightness-50 contrast-125 hover:brightness-75"
-                          } h-full transform object-cover transition`}
+                        className={`${
+                          id === index
+                            ? "brightness-110 hover:brightness-110"
+                            : "brightness-50 contrast-125 hover:brightness-75"
+                        } h-full transform object-cover transition`}
                         src={public_id}
                       />
                     </motion.button>

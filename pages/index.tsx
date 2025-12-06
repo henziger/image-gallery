@@ -31,14 +31,8 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
     <>
       <Head>
         <title>Eric Henziger&apos;s image archive</title>
-        <meta
-          property="og:image"
-          content="https://henziger.se/og-image.png"
-        />
-        <meta
-          name="twitter:image"
-          content="https://henziger.se/og-image.png"
-        />
+        <meta property="og:image" content="https://henziger.se/og-image.png" />
+        <meta name="twitter:image" content="https://henziger.se/og-image.png" />
       </Head>
       <main className="mx-auto max-w-[1960px] p-4">
         {photoId && (
@@ -62,7 +56,8 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               Images from my life
             </h1>
             <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
-              Hi! Welcome to my personal photo gallery, displaying various photos that I like.
+              Hi! Welcome to my personal photo gallery, displaying various
+              photos that I like.
             </p>
             <a
               className="pointer z-10 mt-6 rounded-lg border border-white bg-white px-3 py-2 text-sm font-semibold text-black transition hover:bg-white/10 hover:text-white md:mt-4"
@@ -101,12 +96,12 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
                   25vw"
                 />
               </Link>
-            )})
-          }
+            );
+          })}
         </div>
       </main>
       <footer className="p-6 text-center text-white/80 sm:p-12">
-        See my {" "}
+        See my{" "}
         <a
           href="https://github.com/henziger/image-gallery"
           target="_blank"
