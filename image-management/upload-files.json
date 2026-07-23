@@ -1,0 +1,527 @@
+[
+  {
+    "fileName": "ants.jpg",
+    "metadata": {
+      "title": "Myror och årsringar",
+      "description": "Lidingö. Juni, 2022."
+    }
+  },
+  {
+    "fileName": "autumn-leaves.jpg",
+    "metadata": {
+      "title": "Höst på Djäkneberget",
+      "description": "Västerås. Oktober, 2024."
+    }
+  },
+  {
+    "fileName": "big-boat.jpg",
+    "metadata": {
+      "title": "Big Boat",
+      "description": "Stockholm. Juni, 2023."
+    }
+  },
+  {
+    "fileName": "bjornon.jpg",
+    "metadata": {
+      "title": "Björnön",
+      "description": "Januari, 2025."
+    }
+  },
+  {
+    "fileName": "bug.jpg",
+    "metadata": {
+      "title": "Insekt",
+      "description": "Trångfors, Hallstahammar. Maj, 2024."
+    }
+  },
+  {
+    "fileName": "buns.jpg",
+    "metadata": {
+      "title": "Bullar",
+      "description": "Utflyttningsfika till kollegorna i Linköping. November, 2023."
+    }
+  },
+  {
+    "fileName": "butterfly.jpg",
+    "metadata": {
+      "title": "Kålfjäril?",
+      "description": "Kolbäck. Juli, 2022."
+    }
+  },
+  {
+    "fileName": "butterfly2.jpg",
+    "metadata": {
+      "title": "Fjäril",
+      "description": "Hallstahammar. Augusti, 2023."
+    }
+  },
+  {
+    "fileName": "cake.jpg",
+    "metadata": {
+      "title": "Ryttarkaka",
+      "description": "Kladdkaka med tosca. Mars, 2022."
+    }
+  },
+  {
+    "fileName": "camino.jpg",
+    "metadata": {
+      "title": "La Arena",
+      "description": "I närheten av Pobeña, Spanien. Längs El Camino del Norte. Augusti, 2022."
+    }
+  },
+  {
+    "fileName": "camino2.jpg",
+    "metadata": {
+      "title": "Playa de Langre",
+      "description": "På väg mot Santander längs El Camino del Norte. September, 2022."
+    }
+  },
+  {
+    "fileName": "camino3.jpg",
+    "metadata": {
+      "title": "Playa Buelna",
+      "description": "Spanien. September, 2022."
+    }
+  },
+  {
+    "fileName": "camino4.jpg",
+    "metadata": {
+      "title": "El Camino del Norte",
+      "description": "I närheten av Llanes, Spanien. September, 2022."
+    }
+  },
+  {
+    "fileName": "camino5.jpg",
+    "metadata": {
+      "title": "Surflektion",
+      "description": "I närheten av Llanes, Spanien. September, 2022."
+    }
+  },
+  {
+    "fileName": "caterpillar.jpg",
+    "metadata": {
+      "title": "Larv",
+      "description": "Linköping. Augusti, 2022."
+    }
+  },
+  {
+    "fileName": "cats.jpg",
+    "metadata": {
+      "title": "Los gatos",
+      "description": "Nära Tablizo, Valdés, Spanien. September, 2022."
+    }
+  },
+  {
+    "fileName": "cdurk.jpg",
+    "metadata": {
+      "title": "Femörefortet",
+      "description": "Skylt inne i fortets gångar under mark. Juli, 2018."
+    }
+  },
+  {
+    "fileName": "climbing.jpg",
+    "metadata": {
+      "title": "Klättring",
+      "description": "Ågelsjön. Augusti, 2022."
+    }
+  },
+  {
+    "fileName": "cows.jpg",
+    "metadata": {
+      "title": "Las vacas",
+      "description": "I närheten av Santillana del Mar. September, 2022."
+    }
+  },
+  {
+    "fileName": "cricket.jpg",
+    "metadata": {
+      "title": "Vårtbitare",
+      "description": "Omberg. Augusti, 2021."
+    }
+  },
+  {
+    "fileName": "cykelsemester.jpg",
+    "metadata": {
+      "title": "Cykelsemester",
+      "description": "Påhälsning hos föräldrarna under cykelsemestern sommaren 2021."
+    }
+  },
+  {
+    "fileName": "cykelsemester2.jpg",
+    "metadata": {
+      "title": "Cykelsemester #2",
+      "description": "Grusväg i närheten av Lilla Malma, Malmköping. Juli, 2021."
+    }
+  },
+  {
+    "fileName": "eric.jpg",
+    "metadata": {
+      "title": "Camino Eric",
+      "description": ""
+    }
+  },
+  {
+    "fileName": "flugos.jpg",
+    "metadata": {
+      "title": "Blomma och bi",
+      "description": "Vallastaden, Linköping"
+    }
+  },
+  {
+    "fileName": "funasdalen.jpg",
+    "metadata": {
+      "title": "Funäsdalssjön",
+      "description": "Funäsdalen. Juli, 2025."
+    }
+  },
+  {
+    "fileName": "galdis.jpg",
+    "metadata": {
+      "title": "Galdhöpiggen 2019",
+      "description": "På väg upp till Norges högsta topp!"
+    }
+  },
+  {
+    "fileName": "galdis2.jpg",
+    "metadata": {
+      "title": "Galdhöpiggens topp",
+      "description": "Utsikt från toppen av Galdhöpiggen. Juli, 2019."
+    }
+  },
+  {
+    "fileName": "gavle.jpg",
+    "metadata": {
+      "title": "Boulognerskogen",
+      "description": "Gävle. Juni, 2025."
+    }
+  },
+  {
+    "fileName": "gavle2.jpg",
+    "metadata": {
+      "title": "Kaniner",
+      "description": "Gävle. Juni, 2025."
+    }
+  },
+  {
+    "fileName": "goat.jpg",
+    "metadata": {
+      "title": "Get",
+      "description": "I närheten av Llanes. September, 2022."
+    }
+  },
+  {
+    "fileName": "horses.jpg",
+    "metadata": {
+      "title": "Hästar",
+      "description": "Julafton, 2020"
+    }
+  },
+  {
+    "fileName": "horses2.jpg",
+    "metadata": {
+      "title": "Föl och sto",
+      "description": "I närheten av Flen. Juli, 2021."
+    }
+  },
+  {
+    "fileName": "horses3.jpg",
+    "metadata": {
+      "title": "Hästar #2",
+      "description": "Strömsholm. Juni, 2025."
+    }
+  },
+  {
+    "fileName": "ice.jpg",
+    "metadata": {
+      "title": "Isformation",
+      "description": "Vallastaden, Linköping. Juldagen, 2021."
+    }
+  },
+  {
+    "fileName": "kariknallen.jpg",
+    "metadata": {
+      "title": "Kariknallen",
+      "description": "Taget under Lidingöloppet i Funäsfjällen. 12e juli, 2025."
+    }
+  },
+  {
+    "fileName": "kistefos.jpg",
+    "metadata": {
+      "title": "Kistefos",
+      "description": "Jevnaker, Norge. Juni, 2024."
+    }
+  },
+  {
+    "fileName": "ladybug.jpg",
+    "metadata": {
+      "title": "Nyckelpiga",
+      "description": "I närheten av Sturefors. Maj, 2022."
+    }
+  },
+  {
+    "fileName": "leaf.jpg",
+    "metadata": {
+      "title": "Vatten i asplöv",
+      "description": "Hallstahammar. Juli, 2024."
+    }
+  },
+  {
+    "fileName": "lidingo.jpg",
+    "metadata": {
+      "title": "Lidingö",
+      "description": "Tror bilden är tagen vid Kyttingeviken. Juni, 2022."
+    }
+  },
+  {
+    "fileName": "linkoping.jpg",
+    "metadata": {
+      "title": "Öppna fält och mörka moln",
+      "description": "Linköping. Juli, 2022."
+    }
+  },
+  {
+    "fileName": "lund.jpg",
+    "metadata": {
+      "title": "Tulpaner",
+      "description": "Botaniska trädgården, Lund. Maj, 2021."
+    }
+  },
+  {
+    "fileName": "mittaklappen.jpg",
+    "metadata": {
+      "title": "Mittåkläppen #1",
+      "description": "Juli, 2025."
+    }
+  },
+  {
+    "fileName": "mittaklappen2.jpg",
+    "metadata": {
+      "title": "Mittåkläppen #2",
+      "description": "Juli, 2025."
+    }
+  },
+  {
+    "fileName": "monastery.jpg",
+    "metadata": {
+      "title": "Monasterio de Santa María de Sobrado de los Monjes",
+      "description": "Sobrado, Spanien. September, 2022."
+    }
+  },
+  {
+    "fileName": "moon.jpg",
+    "metadata": {
+      "title": "Vargmåne",
+      "description": "Valstasjön, Hallstahammar. 17:34, 27e december, 2023."
+    }
+  },
+  {
+    "fileName": "norge.jpg",
+    "metadata": {
+      "title": "Blåhøe",
+      "description": "Utsikt över Vågåvatnet från Blåhøe, Norge. Juli, 2019."
+    }
+  },
+  {
+    "fileName": "norge2.jpg",
+    "metadata": {
+      "title": "I balans",
+      "description": "Uppe på Blåhøe, Norge. Juli, 2019."
+    }
+  },
+  {
+    "fileName": "norgesten.jpg",
+    "metadata": {
+      "title": "Norsk sten",
+      "description": "På Blåhøe, Norge. Juli, 2019."
+    }
+  },
+  {
+    "fileName": "omberg.jpg",
+    "metadata": {
+      "title": "Omberg",
+      "description": "Utsikt från Hjässan på Omberg. Augusti, 2021."
+    }
+  },
+  {
+    "fileName": "omberg2.jpg",
+    "metadata": {
+      "title": "Dött träd",
+      "description": "Omberg. Augusti, 2021."
+    }
+  },
+  {
+    "fileName": "omberg3.jpg",
+    "metadata": {
+      "title": "Eric på Omberg",
+      "description": "Oktober, 2024. Fotograf: Oskar Lundvall."
+    }
+  },
+  {
+    "fileName": "oslo.jpg",
+    "metadata": {
+      "title": "Karl Johan och kungliga slottet",
+      "description": "Oslo, Norge. Januari, 2023."
+    }
+  },
+  {
+    "fileName": "peacock-butterfly.jpg",
+    "metadata": {
+      "title": "Påfågelöga",
+      "description": "Fotad i närheten av Bjärka-Säby. April, 2021."
+    }
+  },
+  {
+    "fileName": "plants.jpg",
+    "metadata": {
+      "title": "Odlingslådan",
+      "description": "Från vänster: Basilika (Loki), tomater (Ildi), märgärt (Lincoln), tomater (Tiny Tim). Hallstahammar. Juni, 2025."
+    }
+  },
+  {
+    "fileName": "pumpkin.jpg",
+    "metadata": {
+      "title": "Pumpkin",
+      "description": "April, 2025"
+    }
+  },
+  {
+    "fileName": "racoon.jpg",
+    "metadata": {
+      "title": "Søppeldynga racoon",
+      "description": "Street art found in Bergen, April 2026"
+    }
+  },
+  {
+    "fileName": "red-beetle.jpg",
+    "metadata": {
+      "title": "Röd skalbagge",
+      "description": "Lidingö, 2022"
+    }
+  },
+  {
+    "fileName": "richmond.jpg",
+    "metadata": {
+      "title": "Richmond Park",
+      "description": "London. Maj, 2023."
+    }
+  },
+  {
+    "fileName": "rimforsa.jpg",
+    "metadata": {
+      "title": "Klevberget",
+      "description": "Utsikt från Klevberget, Rimforsa. Maj, 2020."
+    }
+  },
+  {
+    "fileName": "santiago.jpg",
+    "metadata": {
+      "title": "Catedral de Santiago de Compostela",
+      "description": "Slutdestination för min vandring längs Camino del Norte. September, 2022."
+    }
+  },
+  {
+    "fileName": "sheep.jpg",
+    "metadata": {
+      "title": "Norskt får",
+      "description": "Fotogeniskt får i närheten av Blåhøe. Juli, 2019."
+    }
+  },
+  {
+    "fileName": "skuleberget.jpg",
+    "metadata": {
+      "title": "Skuleberget",
+      "description": "Maj, 2023"
+    }
+  },
+  {
+    "fileName": "small-bug.jpg",
+    "metadata": {
+      "title": "Liten insekt",
+      "description": "Omberg. Oktober, 2024."
+    }
+  },
+  {
+    "fileName": "snohetta.jpg",
+    "metadata": {
+      "title": "Snöhetta",
+      "description": "Norge. Augusti, 2017. Molnigt."
+    }
+  },
+  {
+    "fileName": "summer.jpg",
+    "metadata": {
+      "title": "Rapsfält",
+      "description": "Hallstahammar. Juni, 2025."
+    }
+  },
+  {
+    "fileName": "tigerkaka.jpg",
+    "metadata": {
+      "title": "Tigerkaka",
+      "description": "Fika till teamet på Sectra. April, 2019."
+    }
+  },
+  {
+    "fileName": "toad.jpg",
+    "metadata": {
+      "title": "Padda",
+      "description": "Lidingö. Juni, 2025."
+    }
+  },
+  {
+    "fileName": "twickenham.jpg",
+    "metadata": {
+      "title": "Twickenham Stadium",
+      "description": "London. Maj, 2023."
+    }
+  },
+  {
+    "fileName": "ullstamma.jpg",
+    "metadata": {
+      "title": "Ullstämmaskogen",
+      "description": "Grillplats längs Östgötaleden mellan Vidingsjö och Bjärka-Säby. April, 2021."
+    }
+  },
+  {
+    "fileName": "vallastaden.jpg",
+    "metadata": {
+      "title": "Vallastaden, Linköping",
+      "description": "Fotograf: Christoffer Sjöbergsson"
+    }
+  },
+  {
+    "fileName": "vallastaden2.jpg",
+    "metadata": {
+      "title": "Dimmig morgon",
+      "description": "Dimma över fälten sydväst om Vallaskogen, Linköping. Oktober, 2018."
+    }
+  },
+  {
+    "fileName": "vigelandsparken.jpg",
+    "metadata": {
+      "title": "Vigelandsparken",
+      "description": "Oslo, Norge. Januari, 2023."
+    }
+  },
+  {
+    "fileName": "virsborun.jpg",
+    "metadata": {
+      "title": "VirsboRun 2025",
+      "description": "Halvmara i Hälleskogsbrännan. Maj, 2025."
+    }
+  },
+  {
+    "fileName": "waterfall.jpg",
+    "metadata": {
+      "title": "Fettjeåfallet",
+      "description": "Juli, 2025"
+    }
+  },
+  {
+    "fileName": "winter.jpg",
+    "metadata": {
+      "title": "Vinterland",
+      "description": "Hallstahammar. 6e december, 2023."
+    }
+  }
+]
