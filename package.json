@@ -7,20 +7,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.19",
+    "@headlessui/react": "^2.2.10",
     "@heroicons/react": "^2.0.13",
     "@vercel/blob": "^2.6.1",
     "clsx": "^2.1.1",
-    "eslint-config-next": "^15.5.7",
+    "eslint-config-next": "^16.2.11",
     "framer-motion": "^12.42.2",
-    "next": "15.4.10",
-    "next-cloudinary": "^6.17.5",
+    "next": "16.2.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hooks-global-state": "^2.0.0",
     "react-swipeable": "^7.0.0",
     "react-use-keypress": "^1.4.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
@@ -29,7 +28,7 @@
     "dotenv": "^17.4.2",
     "postcss": "^8.5.22",
     "prettier": "^3.9.6",
-    "prettier-plugin-tailwindcss": "^0.7.4",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.3",
     "typescript": "5.9.3"
   }
