@@ -19,12 +19,8 @@ export default async function getResults(): Promise<ImageProps[]> {
   if (cached) return cached;
 
   const { blobs } = await list();
-  // Newest-first ordering by pathname (mirrors the original Cloudinary
-  // `sort_by("public_id", "desc")` behaviour for filenames like
-  // photo-001.jpg, photo-002.jpg, …).
-  const sorted = blobs.sort((a, b) => (a.pathname < b.pathname ? 1 : -1));
 
-  cached = sorted.map((blob, id) => ({
+  cached = blobs.map((blob, id) => ({
     id,
     url: blob.url,
     ...findMetadata(blob.pathname),
