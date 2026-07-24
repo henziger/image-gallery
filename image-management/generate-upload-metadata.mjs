@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import sharp from "sharp";
 
 const SOURCE_FOLDER = "./images";
 const OUTPUT_FILE = "./upload-files.json";
@@ -18,13 +19,41 @@ if (imageFiles.length === 0) {
   process.exit(0);
 }
 
-const data = imageFiles.map((fileName) => ({
-  fileName,
-  metadata: {
-    title: "TITLE",
-    description: "DESCRIPTION",
-  },
-}));
+async function describe(filePath) {
+  const buf = fs.readFileSync(filePath);
+  const imgMeta = await sharp(buf).metadata();
+  const placeholder = await sharp(buf)
+    .resize(10)
+    .jpeg({ quality: 70 })
+    .toBuffer();
+  return {
+    width: imgMeta.width ?? 0,
+    height: imgMeta.height ?? 0,
+    blurDataUrl: `data:image/jpeg;base64,${placeholder.toString("base64")}`,
+  };
+}
+
+const existing = fs.existsSync(OUTPUT_FILE)
+  ? JSON.parse(fs.readFileSync(OUTPUT_FILE, "utf-8"))
+  : [];
+const existingByFileName = new Map(
+  existing.map((item) => [item.fileName, item]),
+);
+
+const data = [];
+for (const fileName of imageFiles) {
+  const prior = existingByFileName.get(fileName);
+  console.log(`Processing ${fileName}...`);
+  const dims = await describe(path.join(SOURCE_FOLDER, fileName));
+  data.push({
+    fileName,
+    metadata: prior?.metadata ?? {
+      title: "TITLE",
+      description: "DESCRIPTION",
+    },
+    ...dims,
+  });
+}
 
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(data, null, 2));
 
