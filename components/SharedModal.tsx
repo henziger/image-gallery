@@ -7,15 +7,15 @@ import {
   InformationCircleIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import clsx from "clsx";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { variants } from "../utils/animationVariants";
 import downloadPhoto from "../utils/downloadPhoto";
 import { range } from "../utils/range";
 import type { ImageProps, SharedModalProps } from "../utils/types";
-import { CldImage } from "next-cloudinary";
-import clsx from "clsx";
 
 export default function SharedModal({
   index,
@@ -81,9 +81,8 @@ export default function SharedModal({
                 exit="exit"
                 className="absolute"
               >
-                <CldImage
-                  src={currentImage.public_id}
-                  crop={"fit"}
+                <Image
+                  src={currentImage.url}
                   width={isPortrait ? 768 : isSquare ? 1280 : 1536}
                   height={1280}
                   priority
@@ -141,7 +140,7 @@ export default function SharedModal({
               <div className="absolute top-0 right-0 flex items-center gap-2 p-3 text-white">
                 {navigation && (
                   <a
-                    href={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${currentImage.public_id}.${currentImage.format}`}
+                    href={currentImage.url}
                     className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
                     target="_blank"
                     title="Open fullsize version"
@@ -152,10 +151,7 @@ export default function SharedModal({
                 )}
                 <button
                   onClick={() =>
-                    downloadPhoto(
-                      `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${currentImage.public_id}.${currentImage.format}`,
-                      `${index}.jpg`,
-                    )
+                    downloadPhoto(currentImage.url, `${index}.jpg`)
                   }
                   className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
                   title="Download fullsize version"
@@ -184,7 +180,7 @@ export default function SharedModal({
               {/* Info panel */}
               {showInfo && (
                 <div className="absolute top-4 left-1/2 z-50 w-[50%] -translate-x-1/2 rounded-lg bg-black/30 p-4 text-center text-white backdrop-blur-md">
-                  <p className="text-lg font-bold">{currentImage.caption}</p>
+                  <p className="text-lg font-bold">{currentImage.title}</p>
                   <p className="mt-2 text-sm font-normal">
                     {currentImage.description}
                   </p>
@@ -201,7 +197,7 @@ export default function SharedModal({
                 className="mx-auto mt-6 mb-6 flex aspect-4/3 h-14"
               >
                 <AnimatePresence initial={false}>
-                  {filteredImages.map(({ public_id, id }) => (
+                  {filteredImages.map(({ url, id }) => (
                     <motion.button
                       initial={{
                         width: "0%",
@@ -223,7 +219,7 @@ export default function SharedModal({
                         id === images.length - 1 ? "rounded-r-md" : ""
                       } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-hidden`}
                     >
-                      <CldImage
+                      <Image
                         alt="small photos on the bottom"
                         width={180}
                         height={120}
@@ -232,7 +228,7 @@ export default function SharedModal({
                             ? "brightness-110 hover:brightness-110"
                             : "brightness-50 contrast-125 hover:brightness-75"
                         } h-full transform object-cover transition`}
-                        src={public_id}
+                        src={url}
                       />
                     </motion.button>
                   ))}
