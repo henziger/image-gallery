@@ -68,9 +68,6 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
             </a>
           </div>
           {images.map(({ id, url, height, width, blurDataUrl }) => {
-            const isSquare = height == width;
-            const isPortrait = height > width;
-
             return (
               <Link
                 key={id}
@@ -87,12 +84,12 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
                   placeholder="blur"
                   blurDataURL={blurDataUrl}
                   src={url}
-                  width={isSquare || isPortrait ? 481 : 640}
-                  height={isPortrait ? 640 : 481}
+                  width={width}
+                  height={height}
                   sizes="(max-width: 640px) 100vw,
-                  (max-width: 1280px) 50vw,
-                  (max-width: 1536px) 33vw,
-                  25vw"
+                         (max-width: 1280px) 50vw,
+                         (max-width: 1536px) 33vw,
+                          25vw"
                 />
               </Link>
             );
