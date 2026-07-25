@@ -51,7 +51,9 @@ export default function SharedModal({
   return (
     <MotionConfig
       transition={{
-        x: { type: "spring", stiffness: 300, damping: 30 },
+        // A plain eased tween, not a spring: springs overshoot and settle,
+        // which causes some motion sickness when swapping between images.
+        x: { type: "tween", duration: 0.45, ease: [0.32, 0.72, 0, 1] },
         opacity: { duration: 0.2 },
       }}
     >
