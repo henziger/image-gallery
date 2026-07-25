@@ -38,6 +38,7 @@ next-env.d.ts
 
 # image assets
 /image-management/images/*
+/image-management/images-optimized/*
 
 # env files
 .env*

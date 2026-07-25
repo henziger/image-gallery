@@ -9,7 +9,9 @@ import readline from "readline/promises";
 config({ path: ".env.local" });
 
 const JSON_FILE = "./image-management/upload-files.json";
-const IMAGES_FOLDER = "./image-management/images";
+// The downscaled, re-encoded copies written by generate-upload-metadata.mjs —
+// never the untouched originals, which stay local.
+const IMAGES_FOLDER = "./image-management/images-optimized";
 
 if (!fs.existsSync(JSON_FILE)) {
   console.error(

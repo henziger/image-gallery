@@ -16,6 +16,13 @@ import downloadPhoto from "../utils/downloadPhoto";
 import { range } from "../utils/range";
 import type { ImageProps, SharedModalProps } from "../utils/types";
 
+// How many thumbnails to keep on each side of the current one in the bottom
+// strip. Every thumbnail is a separate image-optimizer variant, and each new
+// variant costs a full download of the original from Blob, so a wide window is
+// expensive for photos the user only ever scrolls past. This also bounds how
+// far the strip is translated, so it doubles as the clamp below.
+const THUMBNAIL_WINDOW = 5;
+
 export default function SharedModal({
   index,
   images,
@@ -29,7 +36,7 @@ export default function SharedModal({
   const [showInfo, toggleShowInfo] = useState(false);
 
   const filteredImages = images?.filter((img: ImageProps) =>
-    range(index - 15, index + 15).includes(img.id),
+    range(index - THUMBNAIL_WINDOW, index + THUMBNAIL_WINDOW).includes(img.id),
   );
 
   const handlers = useSwipeable({
@@ -174,12 +181,12 @@ export default function SharedModal({
                   <motion.button
                     initial={{
                       width: "0%",
-                      x: `${Math.max((index - 1) * -100, 15 * -100)}%`,
+                      x: `${Math.max((index - 1) * -100, THUMBNAIL_WINDOW * -100)}%`,
                     }}
                     animate={{
                       scale: id === index ? 1.25 : 1,
                       width: "100%",
-                      x: `${Math.max(index * -100, 15 * -100)}%`,
+                      x: `${Math.max(index * -100, THUMBNAIL_WINDOW * -100)}%`,
                     }}
                     exit={{ width: "0%" }}
                     onClick={() => changePhotoId(id)}
@@ -195,7 +202,10 @@ export default function SharedModal({
                     <Image
                       alt="small photos on the bottom"
                       fill
-                      sizes="180px"
+                      // The strip is aspect-4/3 at h-14, so a thumbnail renders
+                      // about 75px wide. 180px was asking for a ~5x oversized
+                      // crop of a full-resolution photo.
+                      sizes="96px"
                       className={`${
                         id === index
                           ? "brightness-110 hover:brightness-110"
